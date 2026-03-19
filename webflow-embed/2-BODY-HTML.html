@@ -33,22 +33,23 @@
   </div>
 </div>
 
-<!-- ═══ PRELOADER + HERO ═══ -->
-<div class="hero-interaction-wrapper">
-  <div class="preloader">
-    <div class="preloader-bar"></div>
-    <div class="preloader-bar"></div>
-    <div class="preloader-bar"></div>
-    <div class="preloader-bar"></div>
-    <div class="preloader-bar"></div>
-  </div>
-  <section class="hero">
-    <div class="hero-bg">
-      <img class="hero-fallback-img" src="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/images/HERO.jpg" alt="Womondo Pegasus" fetchpriority="high">
-      <video class="hero-video" autoplay loop muted playsinline webkit-playsinline poster="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/images/HERO.jpg">
-        <source src="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/videos/Ozadje-womonod_1-transcode.mp4" type="video/mp4">
-      </video>
-    </div>
+<!-- ═══ PRELOADER ═══ -->
+<div class="preloader">
+  <div class="preloader-bar"></div>
+  <div class="preloader-bar"></div>
+  <div class="preloader-bar"></div>
+  <div class="preloader-bar"></div>
+  <div class="preloader-bar"></div>
+</div>
+
+<!-- ═══ SCROLL-DRIVEN HERO ═══ -->
+<section class="hero-scroll-video" id="heroScrollSection">
+  <div class="hero-scroll-video-sticky">
+    <img class="hero-fallback-img" src="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/images/HERO.jpg" alt="Womondo Pegasus" fetchpriority="high">
+    <video id="heroScrollVideo" muted playsinline preload="auto" poster="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/images/HERO.jpg">
+      <source src="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/videos/pegasus-scroll-hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-scroll-video-overlay"></div>
     <div class="hero-content">
       <div class="hero-header">
         <div class="hero-letters">
@@ -74,8 +75,11 @@
         <div class="scroll-arrow-chevron"></div>
       </div>
     </div>
-  </section>
-</div>
+    <div class="hero-scroll-video-progress">
+      <div class="hero-scroll-video-bar" id="scrollVideoBar"></div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ PAGE WRAPPER ═══ -->
 <div class="page-wrapper">

@@ -15,7 +15,7 @@
 <script>WebFont.load({ google: { families: ["Oswald:200,300,400,500,600,700","Montserrat:300,400,500,600,700,800,900","Host Grotesk:300,400,500,600,700","Inter:300,400,500,600,700"] } });</script>
 
 <!-- Pegasus CSS bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/assets/index-CSmtEnBr.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/assets/index-CAwh3AFN.css">
 
 <!-- Font overrides (point to CDN instead of /fonts/) -->
 <style>
@@ -32,12 +32,11 @@
 body { background-color: #0f0f0f !important; color: #e8e4e0 !important; }
 .page-wrapper { opacity: 0; visibility: hidden; }
 
-/* Force hero visibility on mobile (prevent Webflow overrides) */
-.hero-interaction-wrapper { display: block !important; visibility: visible !important; opacity: 1 !important; }
-.hero { display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; height: 100svh !important; min-height: 600px !important; position: relative !important; overflow: hidden !important; }
-.hero-bg { display: block !important; visibility: visible !important; position: absolute !important; inset: 0 !important; }
+/* Force scroll-hero visibility (prevent Webflow overrides) */
+.hero-scroll-video { display: block !important; visibility: visible !important; opacity: 1 !important; position: relative !important; height: 300vh !important; }
+.hero-scroll-video-sticky { display: flex !important; visibility: visible !important; position: sticky !important; top: 0 !important; height: 100vh !important; overflow: hidden !important; }
 .hero-fallback-img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; z-index: 0 !important; }
-.hero-video { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#heroScrollVideo { position: absolute !important; top: 50% !important; left: 50% !important; min-width: 100% !important; min-height: 100% !important; transform: translate(-50%, -50%) !important; object-fit: cover !important; }
 .hero-content { display: flex !important; visibility: visible !important; }
 </style>
 

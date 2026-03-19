@@ -1,0 +1,327 @@
+/* ═══════════════════════════════════════
+   Womondo Pegasus — Scroll-Driven Hero
+   Desktop: scroll scrubs video
+   Mobile: autoplay loop
+   ═══════════════════════════════════════ */
+
+/* ── Preloader (keep existing) ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  pointer-events: none;
+}
+
+.preloader-bar {
+  background-color: var(--bg-primary);
+  width: 20%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* ── Scroll Hero Section ── */
+.hero-scroll-video {
+  position: relative;
+  height: 300vh;
+  z-index: 1;
+}
+
+.hero-scroll-video-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-scroll-video-sticky video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.hero-scroll-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.3) 0%,
+    rgba(15, 15, 15, 0.1) 30%,
+    rgba(15, 15, 15, 0.15) 60%,
+    rgba(15, 15, 15, 0.65) 85%,
+    rgba(15, 15, 15, 0.9) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Hero Content ── */
+.hero-scroll-video-sticky .hero-content {
+  position: absolute;
+  bottom: 4.625em;
+  left: 2.6875em;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: var(--text-secondary);
+  pointer-events: none;
+  text-align: left;
+  max-width: none;
+  padding: 0;
+}
+
+/* Hero header: heading + subtitle */
+.hero-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.hero-letters {
+  display: flex;
+  overflow: clip;
+}
+
+.hero-heading-letter {
+  font-family: 'Host Grotesk', var(--font-primary);
+  color: #fff;
+  font-size: 14.1em;
+  font-weight: 300;
+  line-height: 0.75;
+  margin-left: -5px;
+  padding-left: 0;
+  will-change: transform, opacity;
+}
+
+.hero-heading-letter:first-child {
+  margin-left: 0;
+}
+
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--h5);
+  color: var(--accent);
+  line-height: 1;
+  margin-left: 0.25em;
+  margin-bottom: 0.15em;
+  will-change: opacity, transform;
+}
+
+.hero-lead {
+  max-width: 60em;
+}
+
+.hero-lead .text-size-large {
+  font-size: var(--text-large);
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.hero-lead .yellow {
+  color: var(--accent-yellow);
+  font-size: 2.2em;
+  line-height: 1.2;
+}
+
+/* ── Scroll Indicator ── */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2.5em;
+  right: 2.5em;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  color: var(--text-secondary);
+  will-change: opacity;
+}
+
+.hero-scroll-indicator .text-size-regular {
+  font-size: var(--text-regular);
+}
+
+.scroll-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1rem;
+  height: 2rem;
+  position: relative;
+}
+
+.scroll-arrow-line {
+  width: 1px;
+  height: 100%;
+  background: var(--text-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-arrow-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-yellow);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(200%); }
+  100% { transform: translateY(0); }
+}
+
+.scroll-arrow-chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid var(--text-secondary);
+  border-bottom: 1px solid var(--text-secondary);
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+/* ── Progress Bar ── */
+.hero-scroll-video-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 3;
+}
+
+.hero-scroll-video-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.05s linear;
+}
+
+/* ── Fallback image ── */
+.hero-fallback-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ══════════════════════════
+   Responsive
+   ══════════════════════════ */
+@media screen and (max-width: 991px) {
+  .hero-heading-letter {
+    font-size: 10em;
+  }
+
+  .hero-scroll-video-sticky .hero-content {
+    bottom: 3.5em;
+    left: 2em;
+    gap: 1.5em;
+  }
+
+  .hero-lead .yellow {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-scroll-video {
+    height: 100vh;
+  }
+
+  .hero-scroll-video-sticky {
+    background-color: var(--bg-primary);
+  }
+
+  .hero-scroll-video-sticky video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    transform: none;
+  }
+
+  .hero-scroll-video-progress {
+    display: none;
+  }
+
+  .hero-scroll-video-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 15, 15, 0.15) 0%,
+      rgba(15, 15, 15, 0.05) 40%,
+      rgba(15, 15, 15, 0.55) 100%
+    );
+  }
+
+  .hero-heading-letter {
+    font-size: 6em;
+    margin-left: -3px;
+  }
+
+  .hero-scroll-video-sticky .hero-content {
+    bottom: 6em;
+    left: 1.5em;
+    right: 1.5em;
+    gap: 1.2em;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.2em, 3vw, 1.8em);
+  }
+
+  .hero-lead .yellow {
+    font-size: 1.5em;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-heading-letter {
+    font-size: 4.5em;
+    margin-left: -2px;
+  }
+
+  .hero-scroll-video-sticky .hero-content {
+    bottom: 5em;
+    left: 1em;
+    right: 1em;
+    gap: 1em;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1em, 4vw, 1.4em);
+  }
+
+  .hero-lead .yellow {
+    font-size: 1.3em;
+  }
+
+  .hero-lead .text-size-large {
+    font-size: var(--text-regular);
+  }
+}

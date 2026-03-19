@@ -122,78 +122,89 @@ export function initHero() {
     }, 1.8);
   }
 
-  // ── Parallax effect on scroll (subtle hero movement) ──
-  initHeroParallax();
+  // ── Scroll-driven video scrubbing ──
+  initScrollVideoHero();
 
   return tl;
 }
 
 /**
- * Subtle parallax on the hero content as user scrolls.
- * Content moves up slightly, creating depth.
+ * Scroll-driven video scrubbing for the hero section.
+ * On desktop: scrubs video playback based on scroll position.
+ * On mobile: falls back to autoplay loop.
+ * Also fades out hero content as user scrolls.
  */
-function initHeroParallax() {
-  const heroContent = document.querySelector('.hero-content');
-  const heroBg = document.querySelector('.hero-bg');
+function initScrollVideoHero() {
+  const section = document.getElementById('heroScrollSection');
+  const video = document.getElementById('heroScrollVideo');
+  const bar = document.getElementById('scrollVideoBar');
+  if (!section || !video) return;
 
-  if (!heroContent || typeof gsap === 'undefined') return;
-
-  // Check if ScrollTrigger is available
-  const ScrollTrigger = gsap.core?.globals?.()?.ScrollTrigger;
-  if (!ScrollTrigger) {
-    // Fallback: simple scroll listener for parallax
-    let ticking = false;
-
-    function updateParallax() {
-      const scrollY = window.scrollY;
-      const heroHeight = document.querySelector('.hero')?.offsetHeight || window.innerHeight;
-
-      if (scrollY < heroHeight) {
-        const progress = scrollY / heroHeight;
-        heroContent.style.transform = `translateY(${progress * -60}px)`;
-        heroContent.style.opacity = 1 - progress * 0.8;
-
-        if (heroBg) {
-          heroBg.style.transform = `translateY(${progress * 30}px) scale(${1 + progress * 0.05})`;
-        }
-      }
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    }, { passive: true });
-
+  // Mobile: autoplay loop, no scroll scrub
+  if (window.innerWidth < 768) {
+    video.loop = true;
+    video.play().catch(function(){});
     return;
   }
 
-  // With ScrollTrigger — preferred path
-  gsap.to(heroContent, {
-    y: -60,
-    opacity: 0.2,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true
-    }
+  // Desktop: scroll-driven scrub
+  let ready = false;
+  let duration = 0;
+
+  video.addEventListener('loadedmetadata', function(){
+    duration = video.duration;
+    ready = true;
   });
 
-  if (heroBg) {
-    gsap.to(heroBg, {
-      y: 30,
-      scale: 1.05,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true
+  // Force load
+  video.load();
+
+  let ticking = false;
+  window.addEventListener('scroll', function(){
+    if (!ready || ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      ticking = false;
+      if (!ready) return;
+      const rect = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight - window.innerHeight;
+      const progress = Math.min(Math.max(-rect.top / sectionHeight, 0), 1);
+      const targetTime = progress * duration;
+      if (Math.abs(video.currentTime - targetTime) > 0.05) {
+        video.currentTime = targetTime;
       }
+      if (bar) bar.style.width = (progress * 100) + '%';
     });
+  }, { passive: true });
+
+  // Also add hero content parallax on scroll (fade out as user scrolls)
+  const heroContent = document.querySelector('.hero-content');
+  const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+
+  if (heroContent) {
+    window.addEventListener('scroll', function() {
+      const rect = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight - window.innerHeight;
+      const progress = Math.min(Math.max(-rect.top / sectionHeight, 0), 1);
+
+      // Fade out content as user scrolls past 30%
+      if (progress > 0.3) {
+        const fadeProgress = (progress - 0.3) / 0.4;
+        const opacity = Math.max(0, 1 - fadeProgress);
+        const translateY = fadeProgress * -60;
+        heroContent.style.opacity = opacity;
+        heroContent.style.transform = `translateY(${translateY}px)`;
+      } else {
+        heroContent.style.opacity = '';
+        heroContent.style.transform = '';
+      }
+
+      // Hide scroll indicator immediately on scroll
+      if (scrollIndicator && progress > 0.05) {
+        scrollIndicator.style.opacity = '0';
+      } else if (scrollIndicator) {
+        scrollIndicator.style.opacity = '';
+      }
+    }, { passive: true });
   }
 }

@@ -112,8 +112,8 @@
 
   <!-- ConsentPro -->
   <script src="https://api.consentpro.com/v1/cdn/runtime/688c97f5afd8282a32cb8652/19a649ab2251ea28.js" finsweet="consentpro" async></script>
-  <script type="module" crossorigin src="/assets/index-BmipTJjj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CSmtEnBr.css">
+  <script type="module" crossorigin src="/assets/index-CgW1Y0fi.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CAwh3AFN.css">
 </head>
 <body>
   <!-- GTM noscript -->
@@ -146,22 +146,23 @@
     </div>
   </div>
 
-  <!-- ═══ PRELOADER + HERO ═══ -->
-  <div class="hero-interaction-wrapper">
-    <div class="preloader">
-      <div class="preloader-bar"></div>
-      <div class="preloader-bar"></div>
-      <div class="preloader-bar"></div>
-      <div class="preloader-bar"></div>
-      <div class="preloader-bar"></div>
-    </div>
-    <section class="hero">
-      <div class="hero-bg">
-        <img class="hero-fallback-img" src="/images/HERO.jpg" alt="Womondo Pegasus" fetchpriority="high">
-        <video class="hero-video" autoplay loop muted playsinline webkit-playsinline poster="/images/HERO.jpg">
-          <source src="/videos/Ozadje-womonod_1-transcode.mp4" type="video/mp4">
-        </video>
-      </div>
+  <!-- ═══ PRELOADER ═══ -->
+  <div class="preloader">
+    <div class="preloader-bar"></div>
+    <div class="preloader-bar"></div>
+    <div class="preloader-bar"></div>
+    <div class="preloader-bar"></div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <!-- ═══ SCROLL-DRIVEN HERO ═══ -->
+  <section class="hero-scroll-video" id="heroScrollSection">
+    <div class="hero-scroll-video-sticky">
+      <img class="hero-fallback-img" src="/images/HERO.jpg" alt="Womondo Pegasus" fetchpriority="high">
+      <video id="heroScrollVideo" muted playsinline preload="auto" poster="/images/HERO.jpg">
+        <source src="/videos/pegasus-scroll-hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-scroll-video-overlay"></div>
       <div class="hero-content">
         <div class="hero-header">
           <div class="hero-letters">
@@ -186,8 +187,11 @@
           <div class="scroll-arrow-chevron"></div>
         </div>
       </div>
-    </section>
-  </div>
+      <div class="hero-scroll-video-progress">
+        <div class="hero-scroll-video-bar" id="scrollVideoBar"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══ PAGE WRAPPER ═══ -->
   <div class="page-wrapper">
