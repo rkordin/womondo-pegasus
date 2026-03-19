@@ -462,3 +462,94 @@
     font-size: 1em; /* prevent iOS zoom */
   }
 }
+
+/* ══════════════════════════════════════
+   Webflow Override — Force Form Visibility
+   ══════════════════════════════════════ */
+.pegasus-form {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.form-wrapper {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.form-grid {
+  display: grid !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.form-field {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.pegasus-form input:not([type="checkbox"]):not([type="hidden"]) {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  min-height: 48px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #efeeec !important;
+  padding: 14px 16px !important;
+  font-size: 0.95em !important;
+  border-radius: 0.5em !important;
+}
+
+.pegasus-form textarea {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  min-height: 140px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #efeeec !important;
+  padding: 14px 16px !important;
+  font-size: 0.95em !important;
+  border-radius: 0.5em !important;
+  resize: vertical !important;
+}
+
+.pegasus-form label:not(.checkbox-label) {
+  display: block !important;
+  visibility: visible !important;
+  color: #d3d8da !important;
+  margin-bottom: 8px !important;
+}
+
+.form-consent {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.form-submit {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  background: #b5a291 !important;
+  color: #0f0f0f !important;
+  border: none !important;
+  border-radius: 0.5em !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+.checkbox-label {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}

@@ -57,7 +57,7 @@ body {
 .page-bg-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 15, 15, 0.82);
+  background: rgba(15, 15, 15, 0.6);
 }
 
 /* ── Page Wrapper (visibility control for GSAP) ── */

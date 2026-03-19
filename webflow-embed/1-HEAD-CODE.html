@@ -30,6 +30,14 @@
 /* Dark page background + hide Webflow wrapper until GSAP reveals */
 body { background-color: #0f0f0f !important; color: #e8e4e0 !important; }
 .page-wrapper { opacity: 0; visibility: hidden; }
+
+/* Force hero visibility on mobile (prevent Webflow overrides) */
+.hero-interaction-wrapper { display: block !important; visibility: visible !important; opacity: 1 !important; }
+.hero { display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; height: 100svh !important; min-height: 600px !important; position: relative !important; overflow: hidden !important; }
+.hero-bg { display: block !important; visibility: visible !important; position: absolute !important; inset: 0 !important; }
+.hero-fallback-img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; z-index: 0 !important; }
+.hero-video { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+.hero-content { display: flex !important; visibility: visible !important; }
 </style>
 
 <!-- Structured Data -->

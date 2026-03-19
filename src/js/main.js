@@ -15,6 +15,7 @@ import { initHero } from './hero-animations.js';
 import { initNav } from './nav.js';
 import { initScrollAnimations, initDraggableGallery } from './scroll-animations.js';
 import { initFormValidation } from './form-validation.js';
+import { initSpotlightCards } from './spotlight-cards.js';
 
 // Page load — initialize all modules
 window.addEventListener('load', () => {
@@ -28,6 +29,9 @@ window.addEventListener('load', () => {
 
   // Scroll-triggered animations (highlight text, pricing, specs, interior)
   initScrollAnimations();
+
+  // Mouse-tracking spotlight glow on spec + pricing cards
+  initSpotlightCards();
 
   // Draggable lifestyle gallery
   initDraggableGallery();
