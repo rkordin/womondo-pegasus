@@ -1,0 +1,62 @@
+<!-- ════════════════════════════════════════════════════════════
+     PEGASUS PAGE — HEAD CODE
+     Paste this in: Webflow Page Settings → Custom Code → Head Code
+     ════════════════════════════════════════════════════════════ -->
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+<!-- Google Fonts (secondary) -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>WebFont.load({ google: { families: ["Oswald:200,300,400,500,600,700","Montserrat:300,400,500,600,700,800,900","Host Grotesk:300,400,500,600,700","Inter:300,400,500,600,700"] } });</script>
+
+<!-- Pegasus CSS bundle -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/assets/index-DKMme04x.css">
+
+<!-- Font overrides (point to CDN instead of /fonts/) -->
+<style>
+@font-face { font-family: Satoshi; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: Satoshi; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Satoshi; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: Satoshi; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: Satoshi; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Instrument Serif'; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/InstrumentSerif-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Instrument Serif'; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/InstrumentSerif-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: Bebasneue; src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/BebasNeue.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Dark page background + hide Webflow wrapper until GSAP reveals */
+body { background-color: #0f0f0f !important; color: #e8e4e0 !important; }
+.page-wrapper { opacity: 0; visibility: hidden; }
+</style>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.womondo-by-robeta.com/#org",
+      "name": "Womondo by Robeta",
+      "url": "https://www.womondo-by-robeta.com/"
+    },
+    {
+      "@type": "Product",
+      "name": "Womondo Pegasus",
+      "description": "Premium Mercedes-based campervan. Grace, power, and the freedom to soar.",
+      "category": "Campervan",
+      "brand": { "@type": "Brand", "name": "Womondo" },
+      "manufacturer": { "@id": "https://www.womondo-by-robeta.com/#org" },
+      "offers": [
+        { "@type": "Offer", "name": "Pegasus Regular", "price": "99790", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Pegasus PRO", "price": "115390", "priceCurrency": "EUR" }
+      ]
+    }
+  ]
+}
+</script>
+
+<noscript><style>.page-wrapper { opacity: 1; visibility: visible; }</style></noscript>

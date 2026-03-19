@@ -1,0 +1,22 @@
+<!-- ════════════════════════════════════════════════════════════
+     PEGASUS PAGE — FOOTER CODE
+     Paste this in: Webflow Page Settings → Custom Code → Footer Code
+     ════════════════════════════════════════════════════════════ -->
+
+<!-- Pegasus JS bundle (GSAP + all animations) -->
+<script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/assets/index-BTo-RvYk.js"></script>
+
+<!-- Pegasus Configurator: jsPDF for PDF generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Pegasus Configurator: Config + pricing sheet + webhook -->
+<script>
+  window.PEGASUS_CFG = {
+    csvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJRrHWEDgLGO4Y0VYpv-R8wZKARPOw8AERmSzDDYn22RuPcx6LEiRurf15ODf25x97ZI8bC8buw-6d/pub?output=csv',
+    webhookUrl: 'https://eomp5vj3zurf6as.m.pipedream.net',
+    debug: false
+  };
+</script>
+
+<!-- Pegasus Configurator: 5-step wizard modal (self-contained) -->
+<script src="https://cdn.jsdelivr.net/gh/rkordin/womondo-configurator@11c020f/pegasus-configurator.js" defer></script>
