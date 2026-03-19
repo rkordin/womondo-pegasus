@@ -8,13 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdn.weglot.com">
 
 <!-- Google Fonts (secondary) -->
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 <script>WebFont.load({ google: { families: ["Oswald:200,300,400,500,600,700","Montserrat:300,400,500,600,700,800,900","Host Grotesk:300,400,500,600,700","Inter:300,400,500,600,700"] } });</script>
 
 <!-- Pegasus CSS bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/assets/index-ByyfENLq.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/assets/index-gX_re3uT.css">
 
 <!-- Font overrides (point to CDN instead of /fonts/) -->
 <style>
@@ -66,5 +67,15 @@ body { background-color: #0f0f0f !important; color: #e8e4e0 !important; }
   ]
 }
 </script>
+
+<!-- Weglot language switcher -->
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>Weglot.initialize({ api_key: 'wg_487e443c34e29fc52fae7d87827f50e32' });</script>
+<style>
+/* Weglot switcher — navbar integration */
+.weglot-container { z-index: 10000 !important; }
+#weglot-switcher { z-index: 10000 !important; }
+.jezik { justify-content: flex-start; align-items: center; width: 30px; height: 30px; margin-right: 10px; padding-right: 10px; display: flex; }
+</style>
 
 <noscript><style>.page-wrapper { opacity: 1; visibility: visible; }</style></noscript>
