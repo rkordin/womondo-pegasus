@@ -483,25 +483,19 @@
   visibility: visible !important;
   opacity: 1 !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 32px 20px !important;
-}
-
-.form-field {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.form-field-full {
-  grid-column: 1 / -1 !important;
+  gap: 0 20px !important;
 }
 
 .form-field {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  margin-bottom: 24px !important;
+  padding: 0 !important;
+}
+
+.form-field-full {
+  grid-column: 1 / -1 !important;
 }
 
 .pegasus-form input:not([type="checkbox"]):not([type="hidden"]) {
