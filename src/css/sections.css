@@ -1,0 +1,925 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Womondo Pegasus — Section Styles (Phase 2B)
+   ═══════════════════════════════════════════════════════════════════
+
+   HTML REFERENCE — Paste between the Phase 2B placeholders in index.html
+   ═══════════════════════════════════════════════════════════════════
+
+<!-- ═══ PHILOSOPHY / HIGHLIGHT TEXT ═══ -->
+<section class="section philosophy-section">
+  <div class="spacer-10vh"></div>
+  <div class="container-large">
+    <div class="philosophy_content">
+      <p class="heading-style-h3 display-inline philosophy_text">
+        Introducing the <span class="highlight-text">WOMONDO PEGASUS</span> —
+        a campervan that embodies the spirit of its mythical namesake. Just as
+        Pegasus ascended to the heavens with grace and power,
+        <span class="highlight-text">Pegasus elevates your travel experience</span>
+        to <span class="highlight-text">divine heights.</span>
+      </p>
+    </div>
+  </div>
+  <div class="spacer-10vh"></div>
+</section>
+
+<!-- ═══ MODELS & PRICING ═══ -->
+<section id="pricing" class="section pricing-section">
+  <div class="container-large">
+    <div class="pricing_header">
+      <div class="elipse-align">
+        <div class="small-elipse"></div>
+        <div class="opacity_60">
+          <div class="text-size-small text-style-allcaps">Models &amp; Pricing</div>
+        </div>
+      </div>
+      <p class="text-size-regular text-muted">Germany (DE) incl. 19% VAT</p>
+    </div>
+
+    <div class="pricing_grid">
+      <!-- Regular Card -->
+      <div class="pricing-card" data-animate="fade-up">
+        <div class="pricing-card_badge">Regular</div>
+        <div class="pricing-card_price">
+          <span class="pricing-card_currency">&euro;</span>
+          <span class="pricing-card_amount">99,790</span>
+        </div>
+        <div class="pricing-card_powertrain">
+          <span>150 HP</span>
+          <span class="pricing-card_sep">&middot;</span>
+          <span>Manual transmission</span>
+        </div>
+        <div class="divider"></div>
+        <p class="pricing-card_label text-size-small text-style-allcaps">Standard features</p>
+        <ul class="pricing-card_features">
+          <li>New Womondo Bathroom</li>
+          <li>New swivelling table</li>
+          <li>Rearview camera</li>
+          <li>Radio with Android Auto &amp; Apple CarPlay</li>
+          <li>Truma 4D heating</li>
+          <li>Robeta Air Furniture</li>
+          <li>Driver compartment blackout</li>
+          <li>Awning</li>
+          <li>135 Ah Lithium battery</li>
+          <li>Solar package with inverter &amp; 130 Wp solar panel</li>
+          <li>Maxxfan in the sleeping area</li>
+        </ul>
+      </div>
+
+      <!-- PRO Card -->
+      <div class="pricing-card is-pro" data-animate="fade-up">
+        <div class="pricing-card_badge is-pro">PRO<span class="pricing-card_recommended">Recommended</span></div>
+        <div class="pricing-card_price">
+          <span class="pricing-card_currency">&euro;</span>
+          <span class="pricing-card_amount">115,390</span>
+        </div>
+        <div class="pricing-card_powertrain">
+          <span>150 HP</span>
+          <span class="pricing-card_sep">&middot;</span>
+          <span>Automatic transmission</span>
+        </div>
+        <div class="divider"></div>
+        <p class="pricing-card_label text-size-small text-style-allcaps">All Regular features plus:</p>
+        <ul class="pricing-card_features is-pro">
+          <li>Active Brake Assist</li>
+          <li>93-litre fuel tank</li>
+          <li>Longitudinal beam reinforcement</li>
+          <li>High-performance LED headlights</li>
+          <li>Exit &amp; reversing lights underneath</li>
+          <li>Electrically operated right sliding door</li>
+          <li>Heat-insulated front windscreen</li>
+          <li>Painted bumper &amp; corners</li>
+          <li>Cooling grille in vehicle colour</li>
+          <li>Driver &amp; passenger seat heating</li>
+          <li>Leather steering wheel</li>
+          <li>Acoustic package</li>
+          <li>Additional warm air heating electric</li>
+          <li>Automatic air conditioning Thermotronic</li>
+          <li>Digital radio (DAB)</li>
+          <li>Parking kit with 360&deg; camera</li>
+          <li>Multifunction steering wheel</li>
+          <li>Blind Spot Assist</li>
+          <li>Active Lane Keep Assist</li>
+          <li>Active Distance Assist DISTRONIC</li>
+          <li>Rain sensor</li>
+          <li>Low-beam Assist + wireless remote keys + live traffic pre-wiring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KEY SPECS ═══ -->
+<section id="specs" class="section specs-section">
+  <div class="container-large">
+    <div class="specs_grid">
+      <div class="spec-card" data-animate="fade-up">
+        <div class="spec-card_number">
+          <span class="spec-card_value" data-count-to="5.9" data-decimals="1">0</span>
+          <span class="spec-card_unit">m</span>
+        </div>
+        <p class="spec-card_desc">593 cm long &middot; 206 cm wide &middot; 276 cm high</p>
+      </div>
+      <div class="spec-card" data-animate="fade-up">
+        <div class="spec-card_number">
+          <span class="spec-card_value" data-count-to="3.5" data-decimals="1">0</span>
+          <span class="spec-card_unit">t</span>
+        </div>
+        <p class="spec-card_desc">Gross vehicle weight 3,500 kg &mdash; standard license in most countries.</p>
+      </div>
+      <div class="spec-card" data-animate="fade-up">
+        <div class="spec-card_number">
+          <span class="spec-card_value" data-count-to="9" data-decimals="0">0</span>
+          <span class="spec-card_unit">G-tronic</span>
+        </div>
+        <p class="spec-card_desc">9G-TRONIC automatic transmission for smooth, efficient driving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INTERIOR GALLERY ═══ -->
+<section id="interior" class="section interior-section">
+  <div class="container-large">
+    <div class="interior_header">
+      <div class="elipse-align">
+        <div class="small-elipse"></div>
+        <div class="opacity_60">
+          <div class="text-size-small text-style-allcaps">Interior</div>
+        </div>
+      </div>
+    </div>
+    <div class="interior_grid">
+      <a class="works-cards" data-animate="fade-up">
+        <div class="works-cards_image">
+          <img src="/images/pegasus-sejem-3.jpg"
+               srcset="/images/pegasus-sejem-3-p-500.jpg 500w, /images/pegasus-sejem-3-p-800.jpg 800w, /images/pegasus-sejem-3.jpg 1200w"
+               sizes="(max-width: 767px) 90vw, 45vw"
+               alt="Pegasus living space interior"
+               loading="lazy"
+               class="image-works">
+          <div class="works-card_overlay">
+            <p class="works-card_overlay-text">Spacious interior designed around how people actually use the space.</p>
+          </div>
+        </div>
+        <div class="works-card_content">
+          <p class="text-size-small text-style-allcaps text-weight-medium">The Living Space</p>
+        </div>
+      </a>
+
+      <a class="works-cards" data-animate="fade-up">
+        <div class="works-cards_image">
+          <img src="/images/pegasus-sejem-4.jpg"
+               srcset="/images/pegasus-sejem-4-p-500.jpg 500w, /images/pegasus-sejem-4-p-800.jpg 800w, /images/pegasus-sejem-4.jpg 1200w"
+               sizes="(max-width: 767px) 90vw, 45vw"
+               alt="Pegasus kitchen and dining area"
+               loading="lazy"
+               class="image-works">
+          <div class="works-card_overlay">
+            <p class="works-card_overlay-text">Two burners, deep sink, dual-opening fridge. A kitchen for real cooking.</p>
+          </div>
+        </div>
+        <div class="works-card_content">
+          <p class="text-size-small text-style-allcaps text-weight-medium">Kitchen &amp; Dining</p>
+        </div>
+      </a>
+
+      <a class="works-cards" data-animate="fade-up">
+        <div class="works-cards_image">
+          <img src="/images/pegasus-sejem-2.jpg"
+               srcset="/images/pegasus-sejem-2-p-500.jpg 500w, /images/pegasus-sejem-2-p-800.jpg 800w, /images/pegasus-sejem-2.jpg 1200w"
+               sizes="(max-width: 767px) 90vw, 45vw"
+               alt="Pegasus smart design details"
+               loading="lazy"
+               class="image-works">
+          <div class="works-card_overlay">
+            <p class="works-card_overlay-text">Every surface chosen for real life, not showrooms.</p>
+          </div>
+        </div>
+        <div class="works-card_content">
+          <p class="text-size-small text-style-allcaps text-weight-medium">Smart Design</p>
+        </div>
+      </a>
+
+      <a class="works-cards" data-animate="fade-up">
+        <div class="works-cards_image">
+          <img src="/images/pegasus-sejem.jpg"
+               srcset="/images/pegasus-sejem-p-500.jpg 500w, /images/pegasus-sejem-p-800.jpg 800w, /images/pegasus-sejem.jpg 1200w"
+               sizes="(max-width: 767px) 90vw, 45vw"
+               alt="Pegasus comfort zone sleeping area"
+               loading="lazy"
+               class="image-works">
+          <div class="works-card_overlay">
+            <p class="works-card_overlay-text">Quality bedding, reading lights, morning coffee views.</p>
+          </div>
+        </div>
+        <div class="works-card_content">
+          <p class="text-size-small text-style-allcaps text-weight-medium">Comfort Zone</p>
+        </div>
+      </a>
+
+      <a class="works-cards is-full-width" data-animate="fade-up">
+        <div class="works-cards_image">
+          <img src="/images/pegasus-sejem-5.jpg"
+               srcset="/images/pegasus-sejem-5-p-500.jpg 500w, /images/pegasus-sejem-5-p-800.jpg 800w, /images/pegasus-sejem-5.jpg 1200w"
+               sizes="(max-width: 767px) 90vw, 92vw"
+               alt="Pegasus craftsmanship details"
+               loading="lazy"
+               class="image-works">
+          <div class="works-card_overlay">
+            <p class="works-card_overlay-text">Assembled by dedicated craftsmen who sign their work.</p>
+          </div>
+        </div>
+        <div class="works-card_content">
+          <p class="text-size-small text-style-allcaps text-weight-medium">Built for Life</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIFESTYLE DRAGGABLE GALLERY ═══ -->
+<section id="lifestyle" class="sec-card">
+  <div class="page-wrapper-2">
+    <div class="cursor-fixed">
+      <div class="cursor-default"><img loading="lazy" src="/images/hover-cards-with-drag.svg" alt=""></div>
+      <div class="cursor-hover"><img loading="lazy" src="/images/hover-cards-with-drag.svg" alt="Drag cursor">
+        <div class="drag-images-button is-cards">
+          <div class="text-size-regular text-style-allcaps text-weight-medium">drag me</div>
+        </div>
+      </div>
+      <div class="cursor-grab"><img loading="lazy" src="/images/hover-cards-with-drag.svg" alt="">
+        <div class="drag-images-button is-cards">
+          <div class="text-size-regular text-style-allcaps text-weight-medium">drag me</div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="hero-home">
+        <div class="bg-asset">
+          <div class="bg-noise"></div>
+          <div class="bg-grid"></div>
+        </div>
+        <div class="hero-heading-2">
+          <h2 class="heading-style-h1-2">Interactive</h2>
+          <h2 class="heading-style-h1-2 text-weight-black line-height_88">VanExplorer</h2>
+        </div>
+        <div class="draggable-card is-first">
+          <img src="/images/Noemi-Zonta.jpg"
+               srcset="/images/Noemi-Zonta-p-500.jpg 500w, /images/Noemi-Zonta-p-800.jpg 800w, /images/Noemi-Zonta.jpg 1200w"
+               sizes="40em" alt="Pegasus lifestyle photo" loading="lazy">
+        </div>
+        <div class="draggable-card is-second">
+          <img src="/images/Noemi-Zonta-17.jpg"
+               srcset="/images/Noemi-Zonta-17-p-500.jpg 500w, /images/Noemi-Zonta-17-p-800.jpg 800w, /images/Noemi-Zonta-17.jpg 1200w"
+               sizes="40em" alt="Pegasus lifestyle photo" loading="lazy">
+        </div>
+        <div class="draggable-card is-third">
+          <img src="/images/Noemi-Zonta-15.jpg"
+               srcset="/images/Noemi-Zonta-15-p-500.jpg 500w, /images/Noemi-Zonta-15.jpg 1200w"
+               sizes="40em" alt="Pegasus lifestyle photo" loading="lazy">
+        </div>
+        <div class="draggable-card is-fourth">
+          <img src="/images/Noemi-Zonta-16.jpg"
+               srcset="/images/Noemi-Zonta-16-p-500.jpg 500w, /images/Noemi-Zonta-16-p-800.jpg 800w, /images/Noemi-Zonta-16.jpg 1200w"
+               sizes="40em" alt="Pegasus lifestyle photo" loading="lazy">
+        </div>
+        <div class="draggable-card is-fifth">
+          <img src="/images/Noemi-Zonta-14.jpg"
+               srcset="/images/Noemi-Zonta-14-p-500.jpg 500w, /images/Noemi-Zonta-14-p-800.jpg 800w, /images/Noemi-Zonta-14.jpg 1200w"
+               sizes="40em" alt="Pegasus lifestyle photo" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+   ═══════════════════════════════════════════════════════════════════
+   END HTML REFERENCE
+   ═══════════════════════════════════════════════════════════════════ */
+
+
+/* ═══════════════════════════════════════
+   1. PHILOSOPHY / HIGHLIGHT TEXT SECTION
+   ═══════════════════════════════════════ */
+
+.philosophy-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy_content {
+  max-width: 48em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy_text {
+  color: var(--text-primary);
+  font-weight: var(--weight-regular);
+  line-height: 1.25;
+}
+
+
+/* ═══════════════════════════════════════
+   2. MODELS & PRICING SECTION
+   ═══════════════════════════════════════ */
+
+.pricing-section {
+  position: relative;
+}
+
+.pricing_header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 3em;
+}
+
+.pricing_header .text-muted {
+  color: var(--text-muted);
+}
+
+/* Elipse label pattern (reused from main site) */
+.elipse-align {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.small-elipse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Pricing grid */
+.pricing_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+
+/* Card base */
+.pricing-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 2.5em 2em;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.pricing-card:hover {
+  border-color: var(--border-light);
+}
+
+/* PRO card enhancements */
+.pricing-card.is-pro {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.pricing-card.is-pro:hover {
+  border-color: var(--accent);
+}
+
+/* Badge */
+.pricing-card_badge {
+  font-family: var(--font-primary);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 1.5em;
+}
+
+.pricing-card_badge.is-pro {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.pricing-card_recommended {
+  font-size: 0.7em;
+  font-weight: var(--weight-medium);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: var(--bg-primary);
+  background: var(--accent);
+  padding: 0.25em 0.65em;
+  border-radius: var(--radius-large);
+}
+
+/* Price */
+.pricing-card_price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15em;
+  margin-bottom: 0.5em;
+}
+
+.pricing-card_currency {
+  font-size: 1.5em;
+  font-weight: var(--weight-bold);
+  color: var(--accent);
+}
+
+.pricing-card_amount {
+  font-size: clamp(2em, 4vw, 3.5em);
+  font-weight: var(--weight-black);
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Powertrain */
+.pricing-card_powertrain {
+  font-size: var(--text-regular);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.pricing-card_sep {
+  color: var(--text-muted);
+}
+
+/* Feature label */
+.pricing-card_label {
+  color: var(--text-muted);
+  margin-bottom: 1em;
+}
+
+/* Feature list */
+.pricing-card_features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.pricing-card_features li {
+  font-size: var(--text-regular);
+  color: var(--text-secondary);
+  padding-left: 1.4em;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pricing-card_features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-light);
+}
+
+.pricing-card_features.is-pro li::before {
+  background: var(--accent);
+}
+
+
+/* ═══════════════════════════════════════
+   3. KEY SPECS SECTION
+   ═══════════════════════════════════════ */
+
+.specs-section {
+  position: relative;
+}
+
+.specs_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.spec-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 2.5em 2em;
+  text-align: center;
+  transition: border-color var(--duration-normal) var(--ease-smooth);
+}
+
+.spec-card:hover {
+  border-color: var(--border-light);
+}
+
+.spec-card_number {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.15em;
+  margin-bottom: 0.75em;
+}
+
+.spec-card_value {
+  font-size: clamp(2.5em, 5vw, 4em);
+  font-weight: var(--weight-black);
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.spec-card_unit {
+  font-size: clamp(1em, 1.5vw, 1.25em);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.spec-card_desc {
+  font-size: var(--text-regular);
+  color: var(--text-muted);
+  max-width: 20em;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+
+/* ═══════════════════════════════════════
+   4. INTERIOR GALLERY SECTION
+   ═══════════════════════════════════════ */
+
+.interior-section {
+  position: relative;
+}
+
+.interior_header {
+  margin-bottom: 3em;
+}
+
+.interior_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+
+/* Works-cards pattern (matches main site) */
+.works-cards {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.works-cards.is-full-width {
+  grid-column: 1 / -1;
+}
+
+.works-cards_image {
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  max-height: 41em;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-works {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale3d(1.05, 1.05, 1);
+  transition: transform 0.8s var(--ease-out);
+  will-change: transform;
+}
+
+.works-cards:hover .image-works {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+/* Overlay on hover */
+.works-card_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+}
+
+.works-cards:hover .works-card_overlay {
+  opacity: 1;
+}
+
+.works-card_overlay-text {
+  color: var(--text-primary);
+  font-size: var(--text-large);
+  font-weight: var(--weight-medium);
+  text-align: center;
+  max-width: 24em;
+  line-height: 1.5;
+}
+
+/* Content below image */
+.works-card_content {
+  gap: 1.5em;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  display: flex;
+}
+
+
+/* ═══════════════════════════════════════
+   5. LIFESTYLE DRAGGABLE GALLERY
+   ═══════════════════════════════════════ */
+
+.sec-card {
+  min-height: 130vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-wrapper-2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Background assets */
+.bg-asset {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-noise {
+  z-index: 1;
+  opacity: 0.15;
+  mix-blend-mode: soft-light;
+  filter: blur(0.4px);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/bg-grid.svg');
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Centered heading */
+.hero-home {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 130vh;
+  display: flex;
+  position: relative;
+  overflow: clip;
+}
+
+.hero-heading-2 {
+  text-align: center;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.heading-style-h1-2 {
+  font-family: var(--font-display);
+  font-size: var(--h1);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  font-weight: var(--weight-regular);
+  opacity: 0.15;
+}
+
+.line-height_88 {
+  line-height: 0.88;
+}
+
+/* Draggable cards */
+.draggable-card {
+  cursor: none;
+  border-radius: var(--radius);
+  justify-content: center;
+  align-items: center;
+  width: 40em;
+  height: 26em;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.draggable-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.draggable-card.is-first {
+  z-index: 10;
+  transform: rotate(-6deg);
+}
+
+.draggable-card.is-second {
+  z-index: 9;
+  transform: rotate(0.64deg);
+}
+
+.draggable-card.is-third {
+  z-index: 8;
+  transform: rotate(-2.5deg);
+}
+
+.draggable-card.is-fourth {
+  z-index: 7;
+}
+
+.draggable-card.is-fifth {
+  z-index: 50;
+  transform: rotate(2deg);
+}
+
+/* Custom cursor */
+.cursor-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-fixed img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cursor-default,
+.cursor-hover,
+.cursor-grab {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.drag-images-button {
+  position: absolute;
+  bottom: -2em;
+  white-space: nowrap;
+}
+
+.drag-images-button.is-cards {
+  font-size: 0.7em;
+  color: var(--text-primary);
+}
+
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media screen and (max-width: 991px) {
+  .pricing_grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .specs_grid {
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+  }
+
+  .interior_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .works-cards.is-full-width {
+    grid-column: auto;
+  }
+
+  .draggable-card {
+    width: 28em;
+    height: 18em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Philosophy */
+  .philosophy_text {
+    font-size: clamp(1.5em, 5vw, 2.5em);
+  }
+
+  /* Pricing */
+  .pricing_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 2em 1.5em;
+  }
+
+  .pricing-card_amount {
+    font-size: 2.25em;
+  }
+
+  /* Specs */
+  .specs_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-card {
+    padding: 2em 1.5em;
+  }
+
+  /* Interior */
+  .interior_grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .works-cards_image {
+    max-height: 28em;
+  }
+
+  /* Draggable */
+  .sec-card {
+    min-height: 80vh;
+  }
+
+  .hero-home {
+    min-height: 80vh;
+  }
+
+  .draggable-card {
+    width: 18em;
+    height: 12em;
+  }
+
+  .heading-style-h1-2 {
+    font-size: clamp(2.5em, 12vw, 4em);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .pricing-card_amount {
+    font-size: 1.75em;
+  }
+
+  .spec-card_value {
+    font-size: 2.5em;
+  }
+
+  .draggable-card {
+    width: 14em;
+    height: 9em;
+  }
+}

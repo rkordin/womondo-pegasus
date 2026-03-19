@@ -1,0 +1,285 @@
+/* ═══════════════════════════════════════
+   Womondo Pegasus — Hero Section Styles
+   Preloader + Hero viewport
+   ═══════════════════════════════════════ */
+
+/* ── Preloader ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  pointer-events: none;
+}
+
+.preloader-bar {
+  background-color: var(--bg-primary);
+  width: 20%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* ── Hero Interaction Wrapper ── */
+.hero-interaction-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero Section ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* Background layer */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.3) 0%,
+    rgba(15, 15, 15, 0.1) 30%,
+    rgba(15, 15, 15, 0.15) 60%,
+    rgba(15, 15, 15, 0.65) 85%,
+    rgba(15, 15, 15, 0.9) 100%
+  );
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-fallback-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('/images/HERO.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ── Hero Content ── */
+.hero-content {
+  position: absolute;
+  bottom: 4.625em;
+  left: 2.6875em;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+/* Hero header: heading + subtitle inline */
+.hero-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Letter-by-letter heading — flex layout like the main site */
+.hero-letters {
+  display: flex;
+  overflow: clip;
+}
+
+.hero-heading-letter {
+  font-family: 'Host Grotesk', var(--font-primary);
+  color: #fff;
+  font-size: 14.1em;
+  font-weight: 300;
+  line-height: 0.75;
+  margin-left: -5px;
+  padding-left: 0;
+  will-change: transform, opacity;
+}
+
+.hero-heading-letter:first-child {
+  margin-left: 0;
+}
+
+/* Subtitle: "by Womondo" */
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  font-size: var(--h5);
+  color: var(--accent);
+  line-height: 1;
+  margin-left: 0.25em;
+  margin-bottom: 0.15em;
+  will-change: opacity, transform;
+}
+
+/* Lead text */
+.hero-lead {
+  max-width: 60em;
+}
+
+.hero-lead .text-size-large {
+  font-size: var(--text-large);
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.hero-lead .yellow {
+  color: var(--accent-yellow);
+  font-size: 2.2em;
+  line-height: 1.2;
+}
+
+/* ── Scroll-down indicator ── */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2.5em;
+  right: 2.5em;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  color: var(--text-secondary);
+  will-change: opacity;
+}
+
+.hero-scroll-indicator .text-size-regular {
+  font-size: var(--text-regular);
+}
+
+.scroll-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1rem;
+  height: 2rem;
+  position: relative;
+}
+
+.scroll-arrow-line {
+  width: 1px;
+  height: 100%;
+  background: var(--text-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-arrow-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-yellow);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(200%); }
+  100% { transform: translateY(0); }
+}
+
+.scroll-arrow-chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid var(--text-secondary);
+  border-bottom: 1px solid var(--text-secondary);
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 991px) {
+  .hero-heading-letter {
+    font-size: 10em;
+  }
+
+  .hero-content {
+    bottom: 3.5em;
+    left: 2em;
+    gap: 1.5em;
+  }
+
+  .hero-lead .yellow {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-heading-letter {
+    font-size: 6em;
+    margin-left: -3px;
+  }
+
+  .hero-content {
+    bottom: 6em;
+    left: 1.5em;
+    right: 1.5em;
+    gap: 1.2em;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.2em, 3vw, 1.8em);
+  }
+
+  .hero-lead .yellow {
+    font-size: 1.5em;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 2em;
+    right: 1.5em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-heading-letter {
+    font-size: 4.5em;
+    margin-left: -2px;
+  }
+
+  .hero-content {
+    bottom: 5em;
+    left: 1em;
+    right: 1em;
+    gap: 1em;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1em, 4vw, 1.4em);
+  }
+
+  .hero-lead .yellow {
+    font-size: 1.3em;
+  }
+
+  .hero-lead .text-size-large {
+    font-size: var(--text-regular);
+  }
+
+  .hero-scroll-indicator {
+    bottom: 1.5em;
+    right: 1em;
+  }
+}

@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════
+   Womondo Pegasus — Design Tokens
+   Extracted from womondo-lifestyle.css :root
+   ═══════════════════════════════════════ */
+
+:root {
+  /* ── Backgrounds ── */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #161616;
+  --bg-tertiary: #0e0e10;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.05);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+
+  /* ── Text ── */
+  --text-primary: #efeeec;
+  --text-secondary: #d3d8da;
+  --text-muted: #676767;
+  --text-caption: rgba(65, 65, 65, 0.75);
+
+  /* ── Accent Colors ── */
+  --accent: #b5a291;
+  --accent-30: rgba(181, 162, 145, 0.3);
+  --accent-pink: #ffb4a2;
+  --accent-beige: #c4bfb9;
+  --accent-beige-dark: #736863;
+  --accent-turquoise: #9ecec2;
+  --accent-turquoise-dark: #609696;
+  --accent-yellow: #fde4c6;
+  --accent-pink-muted: #d2b4b2;
+
+  /* ── Womondo Brand Colors ── */
+  --womondo-black: #353535;
+  --womondo-nice-black: #48423f;
+  --womondo-grey: #676767;
+  --womondo-beige-darker: #c9a390;
+
+  /* ── Buttons ── */
+  --button-bg: #121212;
+  --button-bg-hover: #2d2d2e;
+  --button-text: #efeeec;
+
+  /* ── Borders ── */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(181, 162, 145, 0.4);
+
+  /* ── Shadows ── */
+  --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.25);
+  --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 40px rgba(181, 162, 145, 0.15);
+
+  /* ── Fonts ── */
+  --font-primary: Satoshi, Arial, sans-serif;
+  --font-variable: 'Satoshi Variable', Arial, sans-serif;
+  --font-heading: aktiv-grotesk-condensed, sans-serif;
+  --font-display: bebas-neue, Bebasneue, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-inter: Intervariable, Inter, sans-serif;
+  --font-montserrat: Montserrat, sans-serif;
+
+  /* ── Font Weights ── */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
+
+  /* ── Heading Scale (desktop) ── */
+  --h1: clamp(4em, 9vw, 9em);
+  --h2: clamp(3em, 6.25vw, 6.25em);
+  --h3: clamp(2em, 5vw, 5em);
+  --h4: clamp(1.8em, 3.875vw, 3.875em);
+  --h5: clamp(1.5em, 2.5vw, 2.5em);
+  --h6: clamp(1.2em, 2vw, 2em);
+
+  /* ── Text Scale ── */
+  --text-tiny: 0.625rem;
+  --text-small: 0.75em;
+  --text-regular: 0.875em;
+  --text-medium: 1em;
+  --text-large: 1.125em;
+  --text-huge: 1.5em;
+
+  /* ── Layout ── */
+  --container-max: 940px;
+  --container-large: 1200px;
+  --gap: 1em;
+  --section-padding: clamp(60px, 10vh, 120px);
+
+  /* ── Radius ── */
+  --radius: 0.5em;
+  --radius-large: 50em;
+
+  /* ── Transitions ── */
+  --ease-out: cubic-bezier(0.625, 0.05, 0, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.6s;
+
+  /* ── Glass Effect ── */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-blur: blur(20px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+}

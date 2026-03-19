@@ -1,0 +1,463 @@
+/* ═══════════════════════════════════════
+   Womondo Pegasus — Inquiry Form Styles
+   Phase 2C
+   ═══════════════════════════════════════ */
+
+/*
+ ┌─────────────────────────────────────────────────────────────────────────┐
+ │ HTML for #contact section (to be inserted in Phase 3)                  │
+ │                                                                         │
+ │ <section id="contact" class="section form-section">                    │
+ │   <div class="form-video-bg">                                         │
+ │     <video autoplay loop muted playsinline>                            │
+ │       <source src="/videos/Ozadje-womonod_1-transcode.mp4"            │
+ │         type="video/mp4">                                              │
+ │     </video>                                                           │
+ │     <div class="form-video-overlay"></div>                             │
+ │   </div>                                                               │
+ │                                                                         │
+ │   <div class="container-large" style="position:relative;z-index:2;">  │
+ │     <div class="form-header">                                         │
+ │       <p class="section-label text-style-allcaps text-size-small">    │
+ │         Get in Touch</p>                                               │
+ │       <h2 class="heading-style-h4">Request Your Quote</h2>           │
+ │     </div>                                                             │
+ │                                                                         │
+ │     <div class="form-wrapper">                                        │
+ │       <form id="pegasus-form" class="pegasus-form"                    │
+ │         action="https://hubspotonwebflow.com/api/forms/               │
+ │           0439485d-188d-4c85-8ad2-0243607a21c7"                       │
+ │         method="POST" enctype="multipart/form-data"                   │
+ │         data-name="WOMONDO PEGASUS CONFIGURATOR"                      │
+ │         novalidate>                                                    │
+ │                                                                         │
+ │         <div class="form-grid">                                       │
+ │           <div class="form-field field-firstname">                    │
+ │             <label for="firstname">First Name</label>                 │
+ │             <input type="text" name="firstname" id="firstname"        │
+ │               required autocomplete="given-name"                      │
+ │               placeholder="Your first name">                          │
+ │           </div>                                                       │
+ │           <div class="form-field field-lastname">                     │
+ │             <label for="lastname">Last Name</label>                   │
+ │             <input type="text" name="lastname" id="lastname"          │
+ │               required autocomplete="family-name"                     │
+ │               placeholder="Your last name">                           │
+ │           </div>                                                       │
+ │           <div class="form-field form-field-full field-email">        │
+ │             <label for="email">Email</label>                          │
+ │             <input type="email" name="email" id="email"               │
+ │               required autocomplete="email"                           │
+ │               placeholder="your@email.com">                           │
+ │           </div>                                                       │
+ │           <div class="form-field field-country">                      │
+ │             <label for="country">Country</label>                      │
+ │             <input type="text" name="country" id="country"            │
+ │               autocomplete="country-name"                             │
+ │               placeholder="Select your country">                      │
+ │           </div>                                                       │
+ │           <div class="form-field field-zip">                          │
+ │             <label for="zip">Postal Code</label>                      │
+ │             <input type="text" name="zip" id="zip"                    │
+ │               autocomplete="postal-code"                              │
+ │               placeholder="Postal code">                              │
+ │           </div>                                                       │
+ │           <div class="form-field form-field-full field-phone">        │
+ │             <label for="phone">Phone Number</label>                   │
+ │             <input type="tel" name="phone" id="phone"                 │
+ │               autocomplete="tel"                                      │
+ │               placeholder="+XX XXXXXXXXX">                            │
+ │           </div>                                                       │
+ │           <div class="form-field form-field-full field-config">       │
+ │             <label for="customes_configuration_and_price">            │
+ │               Your Configuration</label>                              │
+ │             <textarea name="customes_configuration_and_price"         │
+ │               id="customes_configuration_and_price"                   │
+ │               class="textarea-field" readonly                         │
+ │               rows="6"                                                │
+ │               placeholder="Configure your Pegasus above...">         │
+ │             </textarea>                                               │
+ │           </div>                                                       │
+ │         </div>                                                         │
+ │                                                                         │
+ │         <!-- Hidden fields -->                                        │
+ │         <input type="hidden" name="contact_origin" id="contact_origin"│
+ │           value="WOMONDO CONFIGURATOR (rok)">                         │
+ │         <input type="hidden" name="assigned_dealer"                   │
+ │           id="assigned_dealer">                                       │
+ │         <input type="hidden" name="hutk" value="">                    │
+ │         <input type="hidden" name="ipAddress" value="">               │
+ │         <input type="hidden" name="pageUri" value="">                 │
+ │         <input type="hidden" name="pageId" value="">                  │
+ │         <input type="hidden" name="pageName" value="">                │
+ │                                                                         │
+ │         <!-- Consent -->                                              │
+ │         <div class="form-consent">                                    │
+ │           <p class="consent-intro">Robeta uses your contact           │
+ │             information to respond to your request and keep you        │
+ │             informed about our products, services, and news. Please    │
+ │             indicate below how you prefer to be contacted:</p>        │
+ │           <label class="checkbox-label">                              │
+ │             <input type="checkbox" name="895486508" required          │
+ │               value="895486508">                                      │
+ │             <span class="checkbox-custom"></span>                     │
+ │             <span class="checkbox-text">I agree that Robeta can       │
+ │               contact me regarding my request.</span>                 │
+ │           </label>                                                     │
+ │           <label class="checkbox-label">                              │
+ │             <input type="checkbox" name="890239396"                   │
+ │               value="890239396">                                      │
+ │             <span class="checkbox-custom"></span>                     │
+ │             <span class="checkbox-text">I agree to receive            │
+ │               information about products, services, and news          │
+ │               from Robeta.</span>                                     │
+ │           </label>                                                     │
+ │           <p class="consent-privacy">You can unsubscribe from         │
+ │             communication at any time. Details about data protection   │
+ │             and your rights can be found in our                       │
+ │             <a href="https://www.robeta-campervans.com/legal-notice"  │
+ │               target="_blank" rel="nofollow noopener noreferrer">     │
+ │               privacy policy</a>.</p>                                 │
+ │           <p class="consent-submit-text">By clicking submit below,    │
+ │             you consent to allow Robeta to store and process the      │
+ │             personal information submitted above to handle your       │
+ │             request.</p>                                               │
+ │         </div>                                                         │
+ │                                                                         │
+ │         <button type="submit" class="form-submit">Submit</button>    │
+ │       </form>                                                         │
+ │     </div>                                                             │
+ │   </div>                                                               │
+ │ </section>                                                             │
+ └─────────────────────────────────────────────────────────────────────────┘
+*/
+
+/* ══════════════════════════
+   Section & Background
+   ══════════════════════════ */
+.form-section {
+  position: relative;
+  padding: var(--section-padding) 0;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.form-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.92) 0%,
+    rgba(15, 15, 15, 0.85) 50%,
+    rgba(15, 15, 15, 0.95) 100%
+  );
+}
+
+/* ── Header ── */
+.form-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.form-header .section-label {
+  color: var(--accent);
+  margin-bottom: 0.75em;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.15em;
+}
+
+.form-header h2 {
+  color: var(--text-primary);
+}
+
+/* ── Form Wrapper ── */
+.form-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════
+   Form Grid
+   ══════════════════════════ */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 20px;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+/* ══════════════════════════
+   Labels
+   ══════════════════════════ */
+.pegasus-form label:not(.checkbox-label) {
+  display: block;
+  font-size: 0.7em;
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+/* ══════════════════════════
+   Inputs, Select, Textarea
+   ══════════════════════════ */
+.pegasus-form input:not([type="checkbox"]):not([type="hidden"]),
+.pegasus-form textarea,
+.pegasus-form select {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 0.95em;
+  transition:
+    border-color var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth),
+    background var(--duration-fast) var(--ease-smooth);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pegasus-form input:not([type="checkbox"]):not([type="hidden"])::placeholder,
+.pegasus-form textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* Focus */
+.pegasus-form input:not([type="checkbox"]):not([type="hidden"]):focus,
+.pegasus-form textarea:focus,
+.pegasus-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(181, 162, 145, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Error */
+.pegasus-form .is-invalid {
+  border-color: #d32f2f !important;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.12) !important;
+}
+
+.field-email-msg,
+.field-phone-msg,
+.field-error-msg {
+  margin-top: 6px;
+  font-size: 0.75em;
+  line-height: 1.3;
+  color: #d32f2f;
+  display: none;
+}
+
+/* ══════════════════════════
+   Select (Country Dropdown)
+   ══════════════════════════ */
+.pegasus-form select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23676767' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.pegasus-form select option {
+  background: #1a1a1a;
+  color: var(--text-primary);
+}
+
+/* ══════════════════════════
+   Textarea
+   ══════════════════════════ */
+.pegasus-form textarea {
+  resize: vertical;
+  min-height: 140px;
+  max-height: 400px;
+  line-height: 1.5;
+}
+
+.pegasus-form textarea[readonly] {
+  cursor: default;
+  opacity: 0.85;
+}
+
+/* ══════════════════════════
+   Consent Checkboxes
+   ══════════════════════════ */
+.form-consent {
+  margin-top: 32px;
+}
+
+.consent-intro {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  transition:
+    border-color var(--duration-fast) var(--ease-smooth),
+    background var(--duration-fast) var(--ease-smooth);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid var(--bg-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label input[type="checkbox"]:focus-visible + .checkbox-custom {
+  box-shadow: 0 0 0 3px rgba(181, 162, 145, 0.2);
+}
+
+.checkbox-text {
+  color: var(--text-secondary);
+}
+
+.consent-privacy {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.consent-privacy a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consent-privacy a:hover {
+  opacity: 1;
+  color: var(--accent-pink);
+}
+
+.consent-submit-text {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* ══════════════════════════
+   Submit Button
+   ══════════════════════════ */
+.form-submit {
+  display: block;
+  width: 100%;
+  margin-top: 32px;
+  padding: 18px 32px;
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-family: var(--font-primary);
+  font-size: 0.95em;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-smooth),
+    transform var(--duration-fast) var(--ease-smooth);
+}
+
+.form-submit:hover {
+  background: var(--womondo-beige-darker);
+  transform: translateY(-1px);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ══════════════════════════
+   Responsive
+   ══════════════════════════ */
+@media screen and (max-width: 767px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field-full {
+    grid-column: auto;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .pegasus-form input:not([type="checkbox"]):not([type="hidden"]),
+  .pegasus-form textarea,
+  .pegasus-form select {
+    padding: 12px 14px;
+    font-size: 1em; /* prevent iOS zoom */
+  }
+}
