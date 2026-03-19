@@ -4,98 +4,98 @@
 
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-Light.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-LightItalic.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-LightItalic.woff2') format('woff2');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-MediumItalic.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-MediumItalic.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-BoldItalic.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-BoldItalic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-Black.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Satoshi;
-  src: url('/fonts/Satoshi-BlackItalic.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-BlackItalic.woff2') format('woff2');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi Variable';
-  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/Satoshi-Variable.woff2') format('woff2');
   font-weight: 300 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Instrument Serif';
-  src: url('/fonts/InstrumentSerif-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/InstrumentSerif-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Instrument Serif';
-  src: url('/fonts/InstrumentSerif-Italic.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/InstrumentSerif-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: Intervariable;
-  src: url('/fonts/InterVariable.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/InterVariable.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Bebasneue;
-  src: url('/fonts/BebasNeue.otf') format('opentype');
+  src: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/fonts/BebasNeue.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

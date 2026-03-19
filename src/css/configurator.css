@@ -6,7 +6,7 @@
 
 /* ── Section ── */
 .configurator-section {
-  background-color: var(--bg-primary);
+  background-color: transparent;
   padding: var(--section-padding) 0;
   position: relative;
 }

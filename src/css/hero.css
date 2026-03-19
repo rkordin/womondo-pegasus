@@ -68,7 +68,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('/images/HERO.jpg');
+  background-image: url('https://cdn.jsdelivr.net/gh/rkordin/womondo-pegasus@v1.0/dist/images/HERO.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
