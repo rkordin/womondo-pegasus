@@ -17,25 +17,16 @@ import { gsap } from 'gsap';
  * Call this from main.js after DOMContentLoaded / window.load.
  */
 export function initHero() {
-  const preloaderBars = document.querySelectorAll('.preloader-bar');
   const preloader = document.querySelector('.preloader');
+  const preloaderPercent = document.querySelector('.preloader-percent');
+  const preloaderBarFill = document.querySelector('.preloader-bar-fill');
+  const preloaderLogo = document.querySelector('.preloader-logo');
   const heroLetters = document.querySelectorAll('.hero-heading-letter');
   const heroSubtitle = document.querySelector('.hero-subtitle');
   const heroLead = document.querySelector('.hero-lead');
   const scrollIndicator = document.querySelector('.hero-scroll-indicator');
   const pageWrapper = document.querySelector('.page-wrapper');
-  const heroVideo = document.querySelector('.hero-video');
-
-  // Master timeline
-  const tl = gsap.timeline({
-    defaults: { ease: 'power3.out' },
-    onStart: () => {
-      // Ensure preloader is visible at start
-      if (preloader) {
-        gsap.set(preloader, { display: 'flex' });
-      }
-    }
-  });
+  const heroVideo = document.getElementById('heroScrollVideo');
 
   // ── Phase 0: Set initial states ──
   gsap.set(heroLetters, { y: '110%', opacity: 0 });
@@ -43,89 +34,93 @@ export function initHero() {
   if (heroLead) gsap.set(heroLead, { opacity: 0, y: 30 });
   if (scrollIndicator) gsap.set(scrollIndicator, { opacity: 0, y: 10 });
 
-  // ── Phase 1: Preloader bars slide up ──
-  // Each bar slides up with a staggered delay, revealing the hero beneath
-  if (preloaderBars.length > 0) {
-    tl.to(preloaderBars, {
-      yPercent: -100,
-      duration: 0.8,
-      stagger: {
-        each: 0.08,
-        from: 'center'
-      },
-      ease: 'power2.inOut'
-    }, 0);
+  // ── Loading progress tracker ──
+  let currentPercent = 0;
+  let targetPercent = 0;
+  let loadingDone = false;
 
-    // Hide preloader after animation
-    tl.set(preloader, { display: 'none' }, 0.9);
+  function updatePercent() {
+    if (currentPercent < targetPercent) {
+      currentPercent += Math.max(1, Math.round((targetPercent - currentPercent) * 0.15));
+      if (currentPercent > targetPercent) currentPercent = targetPercent;
+    }
+    if (preloaderPercent) preloaderPercent.textContent = currentPercent + '%';
+    if (preloaderBarFill) preloaderBarFill.style.width = currentPercent + '%';
+
+    if (currentPercent >= 100 && !loadingDone) {
+      loadingDone = true;
+      playReveal();
+      return;
+    }
+    if (!loadingDone) requestAnimationFrame(updatePercent);
   }
 
-  // ── Phase 1.5: Reveal page wrapper ──
-  if (pageWrapper) {
-    tl.to(pageWrapper, {
-      autoAlpha: 1,
-      duration: 0.01
-    }, 0.4);
-  }
-
-  // ── Phase 2: Start video playback ──
+  // Track video loading (or simulate if no video)
   if (heroVideo) {
-    tl.add(() => {
-      heroVideo.play().catch(() => {
-        // Video autoplay blocked — fallback image is already visible
-      });
-    }, 0.5);
+    // Bump to 30% once metadata loads
+    heroVideo.addEventListener('loadedmetadata', () => { targetPercent = Math.max(targetPercent, 30); });
+    // Track buffered progress
+    heroVideo.addEventListener('progress', () => {
+      if (heroVideo.buffered.length > 0) {
+        const buffered = heroVideo.buffered.end(heroVideo.buffered.length - 1);
+        const pct = Math.round((buffered / heroVideo.duration) * 100);
+        targetPercent = Math.max(targetPercent, Math.min(pct, 100));
+      }
+    });
+    heroVideo.addEventListener('canplaythrough', () => { targetPercent = 100; });
+    heroVideo.load();
+
+    // Fallback: if video takes too long, force complete after 6s
+    setTimeout(() => { targetPercent = 100; }, 6000);
+  } else {
+    // No video — just count up quickly
+    targetPercent = 100;
   }
 
-  // ── Phase 3: Hero heading letters reveal ──
-  // Each letter slides up from below, one by one
-  if (heroLetters.length > 0) {
-    tl.to(heroLetters, {
-      y: '0%',
-      opacity: 1,
-      duration: 0.7,
-      stagger: {
-        each: 0.05,
-        from: 'start'
-      },
-      ease: 'power3.out'
-    }, 0.6);
-  }
+  requestAnimationFrame(updatePercent);
 
-  // ── Phase 4: Subtitle fade in ──
-  if (heroSubtitle) {
-    tl.to(heroSubtitle, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power2.out'
-    }, 1.1);
-  }
+  // ── Reveal sequence (after loading) ──
+  function playReveal() {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-  // ── Phase 5: Lead text fade in ──
-  if (heroLead) {
-    tl.to(heroLead, {
-      opacity: 1,
-      y: 0,
-      duration: 0.9,
-      ease: 'power2.out'
-    }, 1.3);
-  }
+    // Fade out preloader content then slide preloader away
+    tl.to(preloaderLogo, { opacity: 0, y: -20, duration: 0.4, ease: 'power2.in' }, 0);
+    tl.to('.preloader-progress', { opacity: 0, y: 20, duration: 0.3, ease: 'power2.in' }, 0.1);
+    tl.to(preloader, { autoAlpha: 0, duration: 0.6, ease: 'power2.inOut' }, 0.4);
+    tl.set(preloader, { display: 'none' }, 1);
 
-  // ── Phase 6: Scroll indicator ──
-  if (scrollIndicator) {
-    tl.to(scrollIndicator, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: 'power2.out'
-    }, 1.8);
+    // Reveal page wrapper
+    if (pageWrapper) {
+      tl.to(pageWrapper, { autoAlpha: 1, duration: 0.01 }, 0.5);
+    }
+
+    // Hero heading letters reveal
+    if (heroLetters.length > 0) {
+      tl.to(heroLetters, {
+        y: '0%', opacity: 1, duration: 0.7,
+        stagger: { each: 0.05, from: 'start' },
+        ease: 'power3.out'
+      }, 0.7);
+    }
+
+    // Subtitle fade in
+    if (heroSubtitle) {
+      tl.to(heroSubtitle, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 1.2);
+    }
+
+    // Lead text fade in
+    if (heroLead) {
+      tl.to(heroLead, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 1.4);
+    }
+
+    // Scroll indicator
+    if (scrollIndicator) {
+      tl.to(scrollIndicator, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 1.9);
+    }
   }
 
   // ── Scroll-driven video scrubbing ──
   initScrollVideoHero();
-
-  return tl;
 }
 
 /**
