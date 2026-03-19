@@ -282,9 +282,13 @@
 
   .hero-scroll-video-sticky .hero-content {
     bottom: 6em;
-    left: 1.5em;
-    right: 1.5em;
+    left: 1.25em;
+    right: 1.25em;
     gap: 1.2em;
+  }
+
+  .hero-letters {
+    overflow: visible;
   }
 
   .hero-subtitle {
@@ -308,8 +312,8 @@
 
   .hero-scroll-video-sticky .hero-content {
     bottom: 5em;
-    left: 1em;
-    right: 1em;
+    left: 1.25em;
+    right: 1.25em;
     gap: 1em;
   }
 
