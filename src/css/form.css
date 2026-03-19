@@ -482,6 +482,12 @@
   display: grid !important;
   visibility: visible !important;
   opacity: 1 !important;
+  gap: 28px 20px !important;
+}
+
+.form-field {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .form-field {
